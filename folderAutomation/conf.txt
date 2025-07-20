@@ -1,1 +1,0 @@
-defaultPath=F:/Programming/VSCode/python

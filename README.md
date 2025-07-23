@@ -8,7 +8,7 @@ It makes a folder where you can choose which files you want to add to it in a di
 ## How to use:
   
 Copy both main.py and conf.txt into the same directory. Then, in the config file, change the path after 'defaultPath=' to be where you make your projects. 
-Then install the modules for the project in the requirenments.txt using 'pip install -r requirenments.txt'. Now you can start using the app by starting the python file.
+Then install the modules for the project in the requirenments.txt using 'pip install -r requirements.txt'. Now you can start using the app by starting the python file.
   
 ## I want an exe so i can just start it:
 

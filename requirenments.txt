@@ -1,0 +1,2 @@
+#Really just one requirenment but its very important so it gets its own file
+PySide6==6.9.1

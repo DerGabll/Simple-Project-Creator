@@ -3,7 +3,7 @@
 
 ## What it does:
 
-It makes a folder where you can choose which files you want to add to it in a directory set by you. So if you want to make multiple projects you can make them easily in the same path and organized :D
+It makes a folder where you can choose which files you want to add to it in a directory set by you. So if you want to make multiple projects you can make them easily in the same path and organized.
 
 ## How to use:
   

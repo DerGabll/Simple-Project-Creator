@@ -1,42 +1,43 @@
-import sys
+from os import path
 from PySide6 import QtCore, QtWidgets, QtGui
-import os
 import getpass
+import sys
+import os
 
 class FolderAutomation(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super(FolderAutomation, self).__init__(parent)
-        self.setWindowTitle("Automatic Projekt Creator")
+        self.setWindowTitle("Simple Project Creator")
 
         user = getpass.getuser()
 
-        CONFIG_PATH = r"F:\Programming\VSCode\python\QTPython\folderAutomation\conf.txt"
+        PATH_LINE = "defaultPath="
+        CONFIG_PATH = "conf.txt"
         DEFAULT_PATH = rf"C:\Users\{user}\Downloads"
 
         font = QtGui.QFont()
         font.setPointSize(20)
         font.setBold(True)
 
-        if not os.path.exists(CONFIG_PATH):
-            f = open(CONFIG_PATH, "a")
-            f.close()
-
+        if not path.exists(CONFIG_PATH):
+            with open(CONFIG_PATH, "w") as file:
+                file.write("Theres only one but he's the chosen one so he gets his own file \n\n")
+                file.write(PATH_LINE+DEFAULT_PATH+"\n")
+        
         with open(CONFIG_PATH, "r") as file:
             lines = file.readlines()
 
         for line in lines:
-            if line.startswith("defaultPath="):
-                self.defaultPath = line.split("defaultPath=")[-1]
-            else:
-                self.defaultPath = DEFAULT_PATH
+            if line.startswith(PATH_LINE):
+                self.defaultPath = line.split(PATH_LINE)[-1].strip()
 
-        self.title = QtWidgets.QLabel("Make A Projekt")
+        self.title = QtWidgets.QLabel("Make A Project")
         self.title.setFont(font)
 
-        self.text1 = QtWidgets.QLabel("Set a name for your Projekt:")
+        self.text1 = QtWidgets.QLabel("Set a name for your Project:")
         self.text2 = QtWidgets.QLabel("Files to add in Project (Seperate with ',')")
 
-        self.button = QtWidgets.QPushButton("Create Projekt")
+        self.button = QtWidgets.QPushButton("Create Project")
 
         self.button.setFont(font)
 

@@ -1,1 +1,3 @@
-defaultPath=F:/Programming/VSCode/python
+Theres only one but he's the chosen one so he gets his own file 
+
+defaultPath=C:\Users\hudi\Downloads
